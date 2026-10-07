@@ -24,5 +24,7 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
 
     - name: Execute Prediction Model Verification
+      env:
+        PYTHONUNBUFFERED: "1"
       run: |
         python main.py
